@@ -1,0 +1,82 @@
+{
+  "configVersion": 1,
+  "timestamp": 1599102705698,
+  "index": "https://github.com/taciane/mhw-atena/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://github.com/taciane/mhw-atena/favicon.ico",
+        "https://github.com/taciane/mhw-atena/index.html",
+        "https://github.com/taciane/mhw-atena/main-es2015.5eca9db1ef6e58c5d2a5.js",
+        "https://github.com/taciane/mhw-atena/main-es5.5eca9db1ef6e58c5d2a5.js",
+        "https://github.com/taciane/mhw-atena/manifest.webmanifest",
+        "https://github.com/taciane/mhw-atena/polyfills-es2015.f332a089ad1600448873.js",
+        "https://github.com/taciane/mhw-atena/polyfills-es5.177e85a9724683782539.js",
+        "https://github.com/taciane/mhw-atena/runtime-es2015.0dae8cbc97194c7caed4.js",
+        "https://github.com/taciane/mhw-atena/runtime-es5.0dae8cbc97194c7caed4.js",
+        "https://github.com/taciane/mhw-atena/scripts.ed1e56a6a0722a855fef.js",
+        "https://github.com/taciane/mhw-atena/styles.66894f7892ad5b644ff4.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://github.com/taciane/mhw-atena/assets/icons/icon-128x128.png",
+        "https://github.com/taciane/mhw-atena/assets/icons/icon-144x144.png",
+        "https://github.com/taciane/mhw-atena/assets/icons/icon-152x152.png",
+        "https://github.com/taciane/mhw-atena/assets/icons/icon-192x192.png",
+        "https://github.com/taciane/mhw-atena/assets/icons/icon-384x384.png",
+        "https://github.com/taciane/mhw-atena/assets/icons/icon-512x512.png",
+        "https://github.com/taciane/mhw-atena/assets/icons/icon-72x72.png",
+        "https://github.com/taciane/mhw-atena/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://github.com/taciane/mhw-atena/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "https://github.com/taciane/mhw-atena/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "https://github.com/taciane/mhw-atena/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "https://github.com/taciane/mhw-atena/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "https://github.com/taciane/mhw-atena/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "https://github.com/taciane/mhw-atena/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "https://github.com/taciane/mhw-atena/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "https://github.com/taciane/mhw-atena/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "https://github.com/taciane/mhw-atena/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "https://github.com/taciane/mhw-atena/index.html": "c5f7e6db9b4e3c319885ac1b9202c0296080b7d8",
+    "https://github.com/taciane/mhw-atena/main-es2015.5eca9db1ef6e58c5d2a5.js": "70a9cf3fa941fe82f4f4a1487a6ac59f64400099",
+    "https://github.com/taciane/mhw-atena/main-es5.5eca9db1ef6e58c5d2a5.js": "b1b8c91d99bc737abfd0c350fa1eaeeac23dd1ad",
+    "https://github.com/taciane/mhw-atena/manifest.webmanifest": "c382754ec03d7f712b31b9aab4aed276cdead449",
+    "https://github.com/taciane/mhw-atena/polyfills-es2015.f332a089ad1600448873.js": "72ad4ccc0a3916ae4598199447cdeadd6d380570",
+    "https://github.com/taciane/mhw-atena/polyfills-es5.177e85a9724683782539.js": "8aa26ea87b9958c6bd13b7c257c0e9940438e684",
+    "https://github.com/taciane/mhw-atena/runtime-es2015.0dae8cbc97194c7caed4.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "https://github.com/taciane/mhw-atena/runtime-es5.0dae8cbc97194c7caed4.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "https://github.com/taciane/mhw-atena/scripts.ed1e56a6a0722a855fef.js": "d03f2ca559888168f91da4b9cc7c9352efcdd846",
+    "https://github.com/taciane/mhw-atena/styles.66894f7892ad5b644ff4.css": "8fb7857e4252d3af0b9186fed8242e3be0aa5e1e"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
