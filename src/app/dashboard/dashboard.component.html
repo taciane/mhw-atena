@@ -1,12 +1,11 @@
 <!-- <div style="text-align:center !important">
   <img id="image-map" usemap="#primary" src="assets/img-dashboard-teste.png" alt="">
  </div> -->
-
  <div style="text-align:center !important">
-  <img class="rwdimgmap mapped-img" src="assets/img-dashboard-teste.png" alt="img-map" usemap="#img-map" />
+  <img #mappedImg class="rwdimgmap mapped-img" src="{{ imgUrl }}" alt="img-map" usemap="#img-map" (load)="updateMap()" />
  
   <map name="img-map" id="img-map">
-    <area *ngFor="let part of parts"
+    <area *ngFor="let part of imgParts"
     shape="{{part.shape}}" coords="{{part.coords}}" (click)="partClicked(part.type)" title="{{part.type}}" />
   </map>
 </div>
