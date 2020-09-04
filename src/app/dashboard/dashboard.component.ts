@@ -7,8 +7,8 @@ import { WhatNextComponent } from './what-next/what-next.component';
 
 @Component({
   selector: 'app-dashboard',
-  // templateUrl: './dashboard.component.html',
-  templateUrl: './dashboard2.html',
+  templateUrl: './dashboard.component.html',
+  // templateUrl: './dashboard2.html',
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {

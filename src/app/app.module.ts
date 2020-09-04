@@ -23,6 +23,7 @@ import { RealityComponent } from './dashboard/reality/reality.component';
 import { OptionsComponent } from './dashboard/options/options.component';
 import { MainService } from './main.service';
 import { WhatNextComponent } from './dashboard/what-next/what-next.component';
+import { MyProfileComponent } from './my-profile/my-profile.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { WhatNextComponent } from './dashboard/what-next/what-next.component';
     ObjectivesComponent,
     RealityComponent,
     OptionsComponent,
-    WhatNextComponent
+    WhatNextComponent,
+    MyProfileComponent
   ],
   imports: [
     BrowserModule,
