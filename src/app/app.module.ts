@@ -8,6 +8,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatDialogModule} from '@angular/material/dialog';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 import {AuthModule} from './auth/auth.module';
 import { AppRoutingModule } from './app-routing.module';
@@ -24,6 +25,9 @@ import { OptionsComponent } from './dashboard/options/options.component';
 import { MainService } from './main.service';
 import { WhatNextComponent } from './dashboard/what-next/what-next.component';
 import { MyProfileComponent } from './my-profile/my-profile.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -36,7 +40,8 @@ import { MyProfileComponent } from './my-profile/my-profile.component';
     RealityComponent,
     OptionsComponent,
     WhatNextComponent,
-    MyProfileComponent
+    MyProfileComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
@@ -48,10 +53,13 @@ import { MyProfileComponent } from './my-profile/my-profile.component';
     FormsModule,
     MatCardModule,
     MatDialogModule,
+    MatSidenavModule,
     ReactiveFormsModule,
     AuthModule,
     AppRoutingModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    LayoutModule,
+    MatListModule
   ],
   providers: [
     MainService
