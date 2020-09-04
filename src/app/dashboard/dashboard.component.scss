@@ -1,0 +1,32 @@
+.with-cursor{
+  width: 400px;
+  height: 300px;
+  border: 1px solid blue;
+  cursor: pointer;
+}
+with-cursor3{
+  width: 200px;
+  height: 300px;
+  border: 1px solid rgb(0, 255, 42);
+  cursor: pointer;
+}
+
+.without-cursor{
+  width: 400px;
+  height: 300px;
+  border: 1px solid red;
+  // cursor: pointer;
+}
+
+.with-cursor-linha1{
+  width: 500px;
+  height: 300px;
+  border: 1px solid blue;
+  cursor: pointer;
+}
+.without-cursor-linha1{
+  width: 200px;
+  height: 300px;
+  border: 1px solid red;
+  // cursor: pointer;
+}
