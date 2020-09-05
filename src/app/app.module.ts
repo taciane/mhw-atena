@@ -9,8 +9,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
-import {AuthModule} from './auth/auth.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -18,6 +18,7 @@ import { environment } from '../environments/environment';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ObjectivesComponent } from './dashboard/objectives/objectives.component';
 import { RealityComponent } from './dashboard/reality/reality.component';
@@ -28,6 +29,8 @@ import { MyProfileComponent } from './my-profile/my-profile.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatListModule } from '@angular/material/list';
+
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,8 @@ import { MatListModule } from '@angular/material/list';
     OptionsComponent,
     WhatNextComponent,
     MyProfileComponent,
-    NavigationComponent
+    NavigationComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -54,8 +58,8 @@ import { MatListModule } from '@angular/material/list';
     MatCardModule,
     MatDialogModule,
     MatSidenavModule,
+    MatFormFieldModule,
     ReactiveFormsModule,
-    AuthModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     LayoutModule,
