@@ -31,6 +31,8 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatListModule } from '@angular/material/list';
 
 import { LoginComponent } from './login/login.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,8 @@ import { LoginComponent } from './login/login.component';
     WhatNextComponent,
     MyProfileComponent,
     NavigationComponent,
-    LoginComponent
+    LoginComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
@@ -63,10 +66,11 @@ import { LoginComponent } from './login/login.component';
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     LayoutModule,
-    MatListModule
+    MatListModule,
+    NgbModule
   ],
   providers: [
-    MainService
+    MainService,
   ],
   bootstrap: [AppComponent]
 })
