@@ -1,0 +1,57 @@
+.with-cursor{
+  width: 400px;
+  height: 300px;
+  border: 1px solid blue;
+  cursor: pointer;
+}
+with-cursor3{
+  width: 200px;
+  height: 300px;
+  border: 1px solid rgb(0, 255, 42);
+  cursor: pointer;
+}
+
+.without-cursor{
+  width: 400px;
+  height: 300px;
+  border: 1px solid red;
+  // cursor: pointer;
+}
+
+.with-cursor-linha1{
+  width: 500px;
+  height: 300px;
+  border: 1px solid blue;
+  cursor: pointer;
+}
+.without-cursor-linha1{
+  width: 200px;
+  height: 300px;
+  border: 1px solid red;
+  // cursor: pointer;
+}
+
+.mapped-img {
+  max-width: 90%;
+  margin-top: 25px;
+}
+.tooltip-img{
+  width: 40%;
+  position: absolute;
+  &.tooltip-objetive{
+    top: 93px;
+    right: 21%;
+  }
+  &.tooltip-reality{
+    top: 136px;
+    right: 19%;
+  }
+  &.tooltip-options{
+    top: 503px;
+    left: 9%;
+  }
+  &.tooltip-next{
+    top: 505px;
+    left: 11%;
+  }
+}
