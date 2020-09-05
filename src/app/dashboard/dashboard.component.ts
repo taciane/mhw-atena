@@ -46,6 +46,11 @@ export class DashboardComponent implements OnInit{
     'highlighted': true
   }];
 
+  public isObjVisible = false;
+  public isOptVisible = false;
+  public isRealVisible = false;
+  public isNextVisible = false;
+
   @ViewChild('mappedImg') private mappedImg;
   constructor(
     public dialog: MatDialog
@@ -59,8 +64,6 @@ export class DashboardComponent implements OnInit{
   click(){}
 
   openDialog(component, step: {id: number, name: string}) {
-    console.log('img', this.mappedImg.nativeElement.offsetHeight);
-
     const dialogRef = this.dialog.open(component, {
       data: null
     });
@@ -116,10 +119,57 @@ export class DashboardComponent implements OnInit{
       else if ( i % 2 === 0 ){ result += ', ' + Math.trunc(coords[i] * heightRatio); }
       else { result += ', ' + Math.trunc(coords[i] * widthRatio); }
     }
-    console.log(coords, result);
+
     part.coords = result;
   });
 
  }
+
+ mouseEnter(type){
+  console.log('mouseover ' + type);
+  switch(type){
+    case 'objective':
+        this.isObjVisible = true;
+        break;
+
+      case 'reality':
+        this.isRealVisible = true;
+        break;
+
+      case 'options':
+        this.isOptVisible = true;
+        break;
+
+      case 'next':
+        this.isNextVisible = true;
+        break;
+
+      default:
+        break;
+  }
+ }
+
+ mouseLeave(type){
+  switch(type){
+    case 'objective':
+        this.isObjVisible = false;
+        break;
+
+      case 'reality':
+        this.isRealVisible = false;
+        break;
+
+      case 'options':
+        this.isOptVisible = false;
+        break;
+
+      case 'next':
+        this.isNextVisible = false;
+        break;
+
+      default:
+        break;
+    }
+  }
 
 }

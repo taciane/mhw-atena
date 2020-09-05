@@ -35,3 +35,23 @@ with-cursor3{
   max-width: 90%;
   margin-top: 25px;
 }
+.tooltip-img{
+  width: 40%;
+  position: absolute;
+  &.tooltip-objetive{
+    top: 93px;
+    right: 21%;
+  }
+  &.tooltip-reality{
+    top: 136px;
+    right: 19%;
+  }
+  &.tooltip-options{
+    top: 503px;
+    left: 9%;
+  }
+  &.tooltip-next{
+    top: 505px;
+    left: 11%;
+  }
+}

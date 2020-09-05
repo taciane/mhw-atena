@@ -1,11 +1,12 @@
-<!-- <div style="text-align:center !important">
-  <img id="image-map" usemap="#primary" src="assets/img-dashboard-teste.png" alt="">
- </div> -->
- <div style="text-align:center !important">
+ <div style="text-align:center !important; display:inline">
   <img #mappedImg class="rwdimgmap mapped-img" src="{{ imgUrl }}" alt="img-map" usemap="#img-map" (load)="updateMap()" />
  
   <map name="img-map" id="img-map">
-    <area *ngFor="let part of imgParts"
-    shape="{{part.shape}}" coords="{{part.coords}}" (click)="partClicked(part.type)" title="{{part.type}}" />
+    <area *ngFor="let part of imgParts" (mouseenter)="mouseEnter(part.type)" (mouseleave)="mouseLeave(part.type)"
+    shape="{{part.shape}}" coords="{{part.coords}}" (click)="partClicked(part.type)" title="{{part.type}}"/> <div></div>
   </map>
+  <img *ngIf="isObjVisible" class="tooltip-img tooltip-objetive" src="../assets/tooltip-objetive.png"/>
+  <img *ngIf="isRealVisible" class="tooltip-img tooltip-reality" src="../assets/tooltip-reality.png"/>
+  <img *ngIf="isOptVisible" class="tooltip-img tooltip-options" src="../assets/tooltip-options.png"/>
+  <img *ngIf="isNextVisible" class="tooltip-img tooltip-next" src="../assets/tooltip-next.png"/>
 </div>
