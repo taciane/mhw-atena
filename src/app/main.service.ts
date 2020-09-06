@@ -15,4 +15,16 @@ export class MainService {
       { id: 4, name: 'Aspiro uma vaga em uma renomada organização', }
     ];
   }
+
+  getTypeOfJob(){
+    return [
+      { id: 1, name: 'Autônomo', },
+      { id: 2, name: 'Estágio', },
+      { id: 3, name: 'Meio período', },
+      { id: 4, name: 'Aprendiz', },
+      { id: 5, name: 'Temporário', },
+      { id: 6, name: 'Tempo integral', },
+      { id: 7, name: 'Freelance', },
+    ];
+  }
 }
