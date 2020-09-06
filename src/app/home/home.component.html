@@ -1,60 +1,62 @@
 <app-header></app-header>
 
 <app-carousel></app-carousel>
-<!-- background-image: url('assets/fundo-degrade-landingpage.svg');  -->
-<div id="parte3" class="" style="background-image: linear-gradient(to right, #EB7C44, #FF4571, #B13FEB, #4252FF );">
-  <!-- backgroud-repeat:no-repeat; -->
-  <h3 for="parte3" class="ferramentas-text" style="padding-top: 25px;margin-top: 10px"><b>CONHEÇA TODAS AS NOSSAS FERRAMENTAS</b></h3><br>
-    <div class="row">
-      <div id="chat" class="col-xs-6 col-md-3" style="text-align:center;">
-        <img src="assets/ferramentas/chat.svg">
-        <p class="ferramentas-text mt-1">CHAT</p>
+
+<!-- <div class="container"> -->
+  <div id="parte3" class="" style="background-image: linear-gradient(to right, #EB7C44, #FF4571, #B13FEB, #4252FF );">
+    <!-- backgroud-repeat:no-repeat; -->
+    <h3 for="parte3" class="ferramentas-text" style="padding-top: 25px;margin-top: 10px"><b>CONHEÇA TODAS AS NOSSAS FERRAMENTAS</b></h3><br>
+      <div class="row">
+        <div id="chat" class="col-xs-6 col-md-3" style="text-align:center;">
+          <img src="assets/ferramentas/chat.svg">
+          <p class="ferramentas-text mt-1">CHAT</p>
+        </div>
+        <div id="rede_apoio" class="col-xs-6 col-md-3" style="text-align:center;">
+          <img class="img-fluid" src="assets/ferramentas/rede_apoio.svg">
+          <p class="ferramentas-text mt-1">REDE DE APOIO</p>
+        </div>
+        <div id="feedback" class="col-xs-6 col-md-3" style="text-align:center;">
+          <img class="img-fluid" src="assets/ferramentas/feedback.svg">
+          <p class="ferramentas-text mt-1">FEEDBACK</p>
+        </div>
+        <div id="simulador_entrevista" class="col-xs-6 col-md-3" style="text-align:center;">
+          <img class="img-fluid" src="assets/ferramentas/simulador_entrevista.svg">
+          <p class="ferramentas-text mt-1">SIMULADOR DE ENTREVISTAS</p>
+        </div>
       </div>
-      <div id="rede_apoio" class="col-xs-6 col-md-3" style="text-align:center;">
-        <img class="img-fluid" src="assets/ferramentas/rede_apoio.svg">
-        <p class="ferramentas-text mt-1">REDE DE APOIO</p>
-      </div>
-      <div id="feedback" class="col-xs-6 col-md-3" style="text-align:center;">
-        <img class="img-fluid" src="assets/ferramentas/feedback.svg">
-        <p class="ferramentas-text mt-1">FEEDBACK</p>
-      </div>
-      <div id="simulador_entrevista" class="col-xs-6 col-md-3" style="text-align:center;">
-        <img class="img-fluid" src="assets/ferramentas/simulador_entrevista.svg">
-        <p class="ferramentas-text mt-1">SIMULADOR DE ENTREVISTAS</p>
-      </div>
+  </div>
+
+  <div id="footer" class="row ml-1 mt-3">
+    <div class="col-md-6">
+      <h4 class="special-txt-color-rose"><b>FALE CONOSCO</b></h4>
+      <label for="part4-1"><b>Telefone: </b> </label>
+      <span> (11) 3504-9327 | (11) 94118-3348</span> <br>
+      <label for="part4-2"><b>Horário de funcionamento: </b></label>
+      <span> De 2ª a 6ª, das 9h às 18h (exceto feriados)</span><br>
+      <label for="part4-3"><b>Endereço: </b></label>
+      <span> Rua dos Pinheiros, 8090 - São Paulo/SP - CEP: 05422-002</span>
     </div>
-</div>
+    <div class="col-md-6">
+      <h4 class="special-txt-color-rose"><b>NEWSLETTER</b></h4>
+      <!-- background-color: #FF4571; -->
+      <button mat-raised-button style="color:#FF4571;">QUERO RECEBER NOVIDADES</button>
+      <br><br>
+      <p for="part" class="special-txt-color-rose"><b>REDES SOCIAIS</b></p>
 
-<div id="footer" class="row ml-1 mt-3">
-  <div class="col-md-6">
-    <h4 class="special-txt-color-rose"><b>FALE CONOSCO</b></h4>
-    <label for="part4-1"><b>Telefone: </b> </label>
-    <span> (11) 3504-9327 | (11) 94118-3348</span> <br>
-    <label for="part4-2"><b>Horário de funcionamento: </b></label>
-    <span> De 2ª a 6ª, das 9h às 18h (exceto feriados)</span><br>
-    <label for="part4-3"><b>Endereço: </b></label>
-    <span> Rua dos Pinheiros, 8090 - São Paulo/SP - CEP: 05422-002</span>
+      <img src="assets/redes-sociais/LINKEDIN.svg" width="30px;">
+      <img src="assets/redes-sociais/YOUTUBE.svg" class="ml-3" width="30px;">
+      <img src="assets/redes-sociais/INSTAGRAM.svg" class="ml-3" width="30px;">
+      <img src="assets/redes-sociais/TWITTER.svg" class="ml-3" width="30px;">
+    </div>
+    <div class="row col-md-12" >
+      <mat-toolbar>
+        <small>
+          <a class="ml-1" href="#" target="_blank" style="color: #4252FF;">
+            Política de Privacidade
+          </a>
+        </small>
+      </mat-toolbar>
+    </div>
   </div>
-  <div class="col-md-6">
-    <h4 class="special-txt-color-rose"><b>NEWSLETTER</b></h4>
-    <!-- background-color: #FF4571; -->
-    <button mat-raised-button style="color:#FF4571;">QUERO RECEBER NOVIDADES</button>
-    <br><br>
-    <p for="part" class="special-txt-color-rose"><b>REDES SOCIAIS</b></p>
-
-    <img src="assets/redes-sociais/LINKEDIN.svg" width="30px;">
-    <img src="assets/redes-sociais/YOUTUBE.svg" class="ml-3" width="30px;">
-    <img src="assets/redes-sociais/INSTAGRAM.svg" class="ml-3" width="30px;">
-    <img src="assets/redes-sociais/TWITTER.svg" class="ml-3" width="30px;">
-  </div>
-  <div class="row col-md-12" >
-    <mat-toolbar>
-      <small>
-        <a class="ml-1" href="#" target="_blank" style="color: #4252FF;">
-          Política de Privacidade
-        </a>
-      </small>
-    </mat-toolbar>
-  </div>
-</div>
-
+<!-- </div> -->
+<!-- background-image: url('assets/fundo-degrade-landingpage.svg');  -->
