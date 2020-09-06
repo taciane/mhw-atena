@@ -1,10 +1,21 @@
-<mat-toolbar color="accent">
-  <mat-icon class="material-icons" aria-hidden="false" aria-label="menu">
-    menu
-  </mat-icon>
-  <!-- <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon> -->
 
-  <span>My Application</span>
+<mat-toolbar>
+  <div class="container" >
+    <div class="row mb-4">
+      <div class="align-self-start">
+        <img src="assets/GrowGirl-logo-colorized-4.svg" style="margin-top: 30px;">
+      </div>
+      <!-- <img; class="float-right"; style="float: right;"; src="assets/icone-lupa-busca.svg"> -->
+      <!-- style="text-align: right;width: 100%;"
+      align-self-end-->
+      <div class="col-md-1 offset-7 align-items-center align-self-end justify-content-end"
+      >
+        <img src="assets/icone-lupa-busca.svg" width="30px;">
+      <!-- <button >LOGIN</button> -->
+        <a class="ml-1" mat-stroked-button href="/login" target="_blank" style="color: #4252FF;">LOGIN</a>
+      </div>
+    </div>
 
-  <mat-icon class="float-right">login</mat-icon>
+  </div>
 </mat-toolbar>
+

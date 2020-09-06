@@ -131,7 +131,6 @@ export class DashboardComponent implements OnInit{
 
     part.coords = result;
   });
-
  }
 
 //  mouseEnter(type){
@@ -180,5 +179,4 @@ export class DashboardComponent implements OnInit{
 //         break;
 //     }
 //   }
-
 }
