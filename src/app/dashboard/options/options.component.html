@@ -40,5 +40,5 @@
 
 <div class="action-buttons" mat-dialog-actions *ngIf="isAvailable">
   <button class="dialog-button back-button" mat-button [mat-dialog-close]>Voltar</button>
-  <button class="dialog-button save-button" mat-button [disabled]="!forms.valid" [mat-dialog-close]="true" cdkFocusInitial>Salvar</button>
+  <button class="dialog-button save-button" mat-button [disabled]="!forms.valid" [mat-dialog-close]="results" cdkFocusInitial>Salvar</button>
 </div>
