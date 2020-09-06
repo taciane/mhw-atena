@@ -134,51 +134,55 @@ export class DashboardComponent implements OnInit{
 
  }
 
-//  mouseEnter(type){
-//   console.log('mouseover ' + type);
-//   switch(type){
-//     case 'objective':
-//         this.isObjVisible = true;
-//         break;
+ onClick(){
+ }
 
-//       case 'reality':
-//         this.isRealVisible = true;
-//         break;
+/*  mouseEnter(type){
+  console.log('mouseover ' + type);
+  switch(type){
+    case 'objective':
+        this.isObjVisible = true;
+        break;
 
-//       case 'options':
-//         this.isOptVisible = true;
-//         break;
+      case 'reality':
+        this.isRealVisible = true;
+        break;
 
-//       case 'next':
-//         this.isNextVisible = true;
-//         break;
+      case 'options':
+        this.isOptVisible = true;
+        break;
 
-//       default:
-//         break;
-//   }
-//  }
+      case 'next':
+        this.isNextVisible = true;
+        break;
 
-//  mouseLeave(type){
-//   switch(type){
-//     case 'objective':
-//         this.isObjVisible = false;
-//         break;
+      default:
+        break;
+  }
+ } */
 
-//       case 'reality':
-//         this.isRealVisible = false;
-//         break;
+/*  mouseLeave(type){
+  switch(type){
+    case 'objective':
+        this.isObjVisible = false;
+        break;
 
-//       case 'options':
-//         this.isOptVisible = false;
-//         break;
+      case 'reality':
+        this.isRealVisible = false;
+        break;
 
-//       case 'next':
-//         this.isNextVisible = false;
-//         break;
+      case 'options':
+        this.isOptVisible = false;
+        break;
 
-//       default:
-//         break;
-//     }
-//   }
+      case 'next':
+        this.isNextVisible = false;
+        break;
 
+      default:
+        break;
+    }
+  }
+
+  }*/
 }
