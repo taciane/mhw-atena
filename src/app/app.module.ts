@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatRadioModule } from '@angular/material/radio';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -33,6 +34,7 @@ import { MatListModule } from '@angular/material/list';
 import { LoginComponent } from './login/login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselComponent } from './carousel/carousel.component';
+import { DialogStepCompleteComponent } from './dashboard/dialog-step-complete/dialog-step-complete.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,8 @@ import { CarouselComponent } from './carousel/carousel.component';
     MyProfileComponent,
     NavigationComponent,
     LoginComponent,
-    CarouselComponent
+    CarouselComponent,
+    DialogStepCompleteComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +70,8 @@ import { CarouselComponent } from './carousel/carousel.component';
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     LayoutModule,
     MatListModule,
-    NgbModule
+    NgbModule,
+    MatRadioModule
   ],
   providers: [
     MainService,
