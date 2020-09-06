@@ -179,4 +179,53 @@ export class DashboardComponent implements OnInit{
 //         break;
 //     }
 //   }
+
+/*  mouseEnter(type){
+  console.log('mouseover ' + type);
+  switch(type){
+    case 'objective':
+        this.isObjVisible = true;
+        break;
+
+      case 'reality':
+        this.isRealVisible = true;
+        break;
+
+      case 'options':
+        this.isOptVisible = true;
+        break;
+
+      case 'next':
+        this.isNextVisible = true;
+        break;
+
+      default:
+        break;
+  }
+ } */
+
+/*  mouseLeave(type){
+  switch(type){
+    case 'objective':
+        this.isObjVisible = false;
+        break;
+
+      case 'reality':
+        this.isRealVisible = false;
+        break;
+
+      case 'options':
+        this.isOptVisible = false;
+        break;
+
+      case 'next':
+        this.isNextVisible = false;
+        break;
+
+      default:
+        break;
+    }
+  }
+
+  }*/
 }

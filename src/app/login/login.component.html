@@ -42,6 +42,10 @@ style="left: 40%"-->
 
         <form action="" class="pt-4 ">
           <h4 class="special-txt-color-blue text-center"><b>REGISTRE-SE</b></h4>
+          <div class="row form-group ml-1 align-items-center align-self-center" >
+            <input type="text" class="form-control col-6 " id="exampleInputName" aria-describedby="name" placeholder="Nome" >
+            <input type="text" class="form-control col-5 ml-1" id="exampleInputLastName" aria-describedby="lastname" placeholder="Sobrenome" >
+          </div>
           <div class="form-group" >
             <input type="email" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="username" >
             <br>
@@ -61,7 +65,8 @@ style="left: 40%"-->
               <a href="#"><i>*termos e condições</i></a>.
             </small>
           </div>
-          <button class="btn btn-button offset-4 pb-2" style="border-radius: 15px; background-color: #FF4571;">
+          <button class="btn btn-button offset-4 mb-2" style="border-radius: 15px; background-color: #FF4571;"
+          (click)="login()">
             <span style="color: white;"><b>ENTRAR</b></span>
           </button>
         </form>

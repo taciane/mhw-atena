@@ -68,10 +68,10 @@ import { CarouselComponent } from './carousel/carousel.component';
     ReactiveFormsModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-    MatRadioModule,
     LayoutModule,
     MatListModule,
-    NgbModule
+    NgbModule,
+    MatRadioModule
   ],
   providers: [
     MainService,
