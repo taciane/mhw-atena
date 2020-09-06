@@ -4,6 +4,7 @@ import { ObjectivesComponent } from './objectives/objectives.component';
 import { RealityComponent } from './reality/reality.component';
 import { OptionsComponent } from './options/options.component';
 import { WhatNextComponent } from './what-next/what-next.component';
+import { DialogStepCompleteComponent } from './dialog-step-complete/dialog-step-complete.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -65,7 +66,7 @@ export class DashboardComponent implements OnInit{
 
   openDialog(component, step: {id: number, name: string}) {
     const dialogRef = this.dialog.open(component, {
-      data: null
+      data: this.step
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -73,8 +74,16 @@ export class DashboardComponent implements OnInit{
         if(step['id'] > this.step.id){
           this.step = step;
           this.setImage(this.step.name);
+
+          this.openStepCompleteDialog('../assets/completed-' + this.step.name  + '.png');
         }
       }
+    });
+  }
+
+  openStepCompleteDialog(img: string){
+    const dialogRef = this.dialog.open(DialogStepCompleteComponent, {
+      data: img
     });
   }
 
@@ -125,51 +134,51 @@ export class DashboardComponent implements OnInit{
 
  }
 
- mouseEnter(type){
-  console.log('mouseover ' + type);
-  switch(type){
-    case 'objective':
-        this.isObjVisible = true;
-        break;
+//  mouseEnter(type){
+//   console.log('mouseover ' + type);
+//   switch(type){
+//     case 'objective':
+//         this.isObjVisible = true;
+//         break;
 
-      case 'reality':
-        this.isRealVisible = true;
-        break;
+//       case 'reality':
+//         this.isRealVisible = true;
+//         break;
 
-      case 'options':
-        this.isOptVisible = true;
-        break;
+//       case 'options':
+//         this.isOptVisible = true;
+//         break;
 
-      case 'next':
-        this.isNextVisible = true;
-        break;
+//       case 'next':
+//         this.isNextVisible = true;
+//         break;
 
-      default:
-        break;
-  }
- }
+//       default:
+//         break;
+//   }
+//  }
 
- mouseLeave(type){
-  switch(type){
-    case 'objective':
-        this.isObjVisible = false;
-        break;
+//  mouseLeave(type){
+//   switch(type){
+//     case 'objective':
+//         this.isObjVisible = false;
+//         break;
 
-      case 'reality':
-        this.isRealVisible = false;
-        break;
+//       case 'reality':
+//         this.isRealVisible = false;
+//         break;
 
-      case 'options':
-        this.isOptVisible = false;
-        break;
+//       case 'options':
+//         this.isOptVisible = false;
+//         break;
 
-      case 'next':
-        this.isNextVisible = false;
-        break;
+//       case 'next':
+//         this.isNextVisible = false;
+//         break;
 
-      default:
-        break;
-    }
-  }
+//       default:
+//         break;
+//     }
+//   }
 
 }

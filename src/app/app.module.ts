@@ -8,6 +8,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatDialogModule} from '@angular/material/dialog';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
+import { MatRadioModule } from '@angular/material/radio';
 
 import {AuthModule} from './auth/auth.module';
 import { AppRoutingModule } from './app-routing.module';
@@ -23,6 +24,7 @@ import { RealityComponent } from './dashboard/reality/reality.component';
 import { OptionsComponent } from './dashboard/options/options.component';
 import { MainService } from './main.service';
 import { WhatNextComponent } from './dashboard/what-next/what-next.component';
+import { DialogStepCompleteComponent } from './dashboard/dialog-step-complete/dialog-step-complete.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { WhatNextComponent } from './dashboard/what-next/what-next.component';
     ObjectivesComponent,
     RealityComponent,
     OptionsComponent,
-    WhatNextComponent
+    WhatNextComponent,
+    DialogStepCompleteComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,8 @@ import { WhatNextComponent } from './dashboard/what-next/what-next.component';
     ReactiveFormsModule,
     AuthModule,
     AppRoutingModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    MatRadioModule
   ],
   providers: [
     MainService
