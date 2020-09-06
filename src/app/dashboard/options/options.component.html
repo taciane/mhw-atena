@@ -1,8 +1,42 @@
+<div class="dialog-header" *ngIf="isAvailable">
+  <img class="dialog-img" src="../../../assets/img-lamp.png"/>
+  <div class="dialog-text">
+    <span>
+      Na etapade opções é hora de encontrar soluções para seus problemas, desenvolvendo seu potencial criativo.
+      É importante que você tenha a capacidade de apresentar um vasto número de alternativas,
+      pois as soluções mais originais geralmente aparecem após o esvaziamento das opções que estão mais à vista.
+    </span>
+  </div>
+</div>
+
 <h1 mat-dialog-title>
-  <h4> Opções</h4>
+  <h4 class="window-title">Opções</h4>
+  <button mat-dialog-close class="close-button"> 
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+  </button>
 </h1>
 <div mat-dialog-content>
-  <div class="col-md-12">
+  <div class="col-md-12" *ngIf="isAvailable">
+    <p>
+        <label for="obj-list">O que você pode fazer para que o seu objetivo se torne realidade?</label>
+        <textarea class="forms-field"></textarea>
+    </p>
 
+    <p>
+        <label for="obj-list">O que mais você pode tentar?</label>
+        <textarea class="big-field forms-field"></textarea>
+    </p>
+
+    <p>
+        <label for="obj-list">Quais são os prós e os contras ao fazer isso?</label>
+        <textarea class="forms-field"></textarea>
+    </p>
   </div>
+
+  <span *ngIf="!isAvailable">Uh oh! Você pulou algum passo!</span>
+</div>
+
+<div class="action-buttons" mat-dialog-actions *ngIf="isAvailable">
+  <button class="dialog-button back-button" mat-button [mat-dialog-close]>Voltar</button>
+  <button class="dialog-button save-button" mat-button [mat-dialog-close]="true" cdkFocusInitial>Salvar</button>
 </div>

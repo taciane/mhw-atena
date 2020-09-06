@@ -1,17 +1,44 @@
+<div class="dialog-header">
+  <img class="dialog-img" src="../../../assets/img-lamp.png"/>
+  <div class="dialog-text">
+    <span>
+      Nesta etapa é importante que você seja o mais detalhista possível, principalmente neste início, pois uma meta bem estruturada e específica, mensurável, realista e deve possuir um prazo para ser atingida.
+    </span>
+  </div>
+</div>
+
 <h1 mat-dialog-title>
-  <h4> Objetivo</h4>
+  <h4 class="window-title"> Objetivos</h4>
+  <button mat-dialog-close class="close-button"> 
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+  </button>
 </h1>
+
 <div mat-dialog-content>
   <div class="col-md-12">
-    <label for="obj-list">Qual seu objetivo?</label>
-    <select id="obj-list" class="btn btn-default dropdown-toggle form-control"
-      [(ngModel)]="objective"
-          (ngModelChange)="selectObjective($event)">
-          <option *ngFor="let item of listObjectives" [value]="item">
-            {{ item.name }}
-          </option>
-        </select>
+    <p>
+        <label for="obj-list">Quais são as metas para sua carreira?</label>
+        <textarea class="forms-field"></textarea>
+    </p>
 
+    <p>
+        <label for="obj-list">Quais são as suas metas para daqui a 1, 5 e 10 anos?</label>
+        <textarea class="big-field forms-field"></textarea>
+    </p>
 
+    <p>
+        <label for="obj-list">Quais são os diferenciais que você deseja ter como profissional?</label>
+        <textarea class="forms-field"></textarea>
+    </p>
+
+    <p>
+        <label for="obj-list">Quais ações que você deve tomar para atingir cada objetivo proposto?</label>
+        <textarea class="forms-field"></textarea>
+    </p>
   </div>
+</div>
+
+<div class="action-buttons" mat-dialog-actions>
+  <button class="dialog-button back-button" mat-button [mat-dialog-close]>Voltar</button>
+  <button class="dialog-button save-button" mat-button [mat-dialog-close]="true" cdkFocusInitial>Salvar</button>
 </div>
