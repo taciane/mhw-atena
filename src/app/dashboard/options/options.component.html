@@ -17,20 +17,22 @@
 </h1>
 <div mat-dialog-content>
   <div class="col-md-12" *ngIf="isAvailable">
+    <form [formGroup]="forms">
     <p>
         <label for="obj-list">O que você pode fazer para que o seu objetivo se torne realidade?</label>
-        <textarea class="forms-field"></textarea>
+        <textarea class="forms-field" formControlName="answer1" [(ngModel)]="results.answer1"></textarea>
     </p>
 
     <p>
         <label for="obj-list">O que mais você pode tentar?</label>
-        <textarea class="big-field forms-field"></textarea>
+        <textarea class="forms-field" formControlName="answer2" [(ngModel)]="results.answer2"></textarea>
     </p>
 
     <p>
         <label for="obj-list">Quais são os prós e os contras ao fazer isso?</label>
-        <textarea class="forms-field"></textarea>
+        <textarea class="forms-field" formControlName="answer3" [(ngModel)]="results.answer3"></textarea>
     </p>
+    </form>
   </div>
 
   <span *ngIf="!isAvailable">Uh oh! Você pulou algum passo!</span>
@@ -38,5 +40,5 @@
 
 <div class="action-buttons" mat-dialog-actions *ngIf="isAvailable">
   <button class="dialog-button back-button" mat-button [mat-dialog-close]>Voltar</button>
-  <button class="dialog-button save-button" mat-button [mat-dialog-close]="true" cdkFocusInitial>Salvar</button>
+  <button class="dialog-button save-button" mat-button [disabled]="!forms.valid" [mat-dialog-close]="true" cdkFocusInitial>Salvar</button>
 </div>
