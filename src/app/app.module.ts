@@ -22,6 +22,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatMenuModule} from '@angular/material/menu';
 
 // import { MatMomentDateModule } from '@angular/material-moment-adapter';
 
@@ -81,6 +82,7 @@ import { MyProfileComponent } from './my-profile/my-profile.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatProgressBarModule,
+    MatMenuModule,
     ReactiveFormsModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),

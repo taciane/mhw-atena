@@ -2,19 +2,35 @@
 <mat-toolbar style="height: 75px;">
   <div class="container" >
     <div class="row mb-4">
-      <button mat-button  style="position: absolute; left: 0;  outline: unset;" (click)="true">
+      <button mat-button [matMenuTriggerFor]="menu1"  style="position: absolute; left: 0;  outline: unset;" (click)="true">
         <mat-icon style="color: #4252FF; font-size:35px; margin-top: -10px;">menu</mat-icon>
         <span style="color: #4252FF; font-size: 24px; margin-left: 15px;">MENU</span>
       </button>
+      <mat-menu #menu1="matMenu">
+        <button mat-menu-item>
+          <img src="assets/icons-profile/icone-perfil.svg" alt="" width="25px" height="25px"> Perfil</button>
+        <button mat-menu-item><img src="assets/icons-profile/icone-chat.svg" alt="" width="25px" height="25px"> Chat</button>
+        <button mat-menu-item><img src="assets/icons-profile/icone-rede-apoio.svg" alt="" width="25px" height="25px"> Rede de Apoio</button>
+        <button mat-menu-item><img src="assets/icons-profile/icone-feedback.svg" alt="" width="25px" height="25px"> Feedback</button>
+        <button mat-menu-item><img src="assets/icons-profile/icone-simulador.svg" alt="" width="25px" height="25px"> Simulador de Entrevista</button>
+      </mat-menu>
 
       <div style="position: absolute;left:45%">
         <a href="/"><img src="assets/GrowGirl-logo-colorized-4.svg" style="height: 25px;"></a>
       </div>
-      <!-- <img; class="float-right"; style="float: right;"; src="assets/icone-lupa-busca.svg"> -->
-      <!-- style="text-align: right;width: 100%;"
-      align-self-end-->
+
       <div style="position: absolute; right:35px;">
         <img src="assets/icone-lupa-busca.svg" width="30px;">
+        <button mat-button [matMenuTriggerFor]="menu">
+          <img src="assets/avatars-grow-girl/5.svg" alt="" width="32px" height="32px">
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <img src="assets/icons-profile/icone-perfil.svg" alt="" width="25px" height="25px">Perfil</button>
+          <button mat-menu-item><img src="assets/icons-profile/icone-pontuacao.svg" alt="" width="25px" height="25px">Pontuação</button>
+          <button mat-menu-item><img src="assets/icons-profile/icone-dicas.svg" alt="" width="25px" height="25px">Dicas</button>
+          <button mat-menu-item><img src="assets/icons-profile/icone-sair.svg" alt="" width="25px" height="25px"> Sair</button>
+        </mat-menu>
       </div>
     </div>
   </div>
