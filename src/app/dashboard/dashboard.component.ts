@@ -6,6 +6,8 @@ import { OptionsComponent } from './options/options.component';
 import { WhatNextComponent } from './what-next/what-next.component';
 import { DialogStepCompleteComponent } from './dialog-step-complete/dialog-step-complete.component';
 
+import { SharedService } from 'src/app/services/shared.service'
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -52,14 +54,19 @@ export class DashboardComponent implements OnInit{
   public isRealVisible = false;
   public isNextVisible = false;
 
+  private subscription;
+  public profileImg = '';
+
   @ViewChild('mappedImg') private mappedImg;
-  constructor(
-    public dialog: MatDialog
-  ) { }
+  constructor( public dialog: MatDialog, private sharedService: SharedService ) { }
 
   ngOnInit(): void {
     this.step = this.steps[0];
     this.setImage(this.step.name);
+
+    this.subscription = this.sharedService.currentProfileImage.subscribe((img) => {
+      this.profileImg = img;
+    })
   }
 
   click(){}
