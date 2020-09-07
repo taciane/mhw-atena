@@ -1,5 +1,6 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { MatDialog, MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
+import { Component, OnInit, Inject} from '@angular/core';
+import { FormGroup, Validators, FormControl } from '@angular/forms';
+import { MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import { MainService } from '../../main.service';
 
 @Component({
@@ -14,6 +15,15 @@ export class ObjectivesComponent implements OnInit {
   public id: number;
   public currentStep: {id: number, nome: string};
 
+  public results =  {
+    answer1: '',
+    answer2: '',
+    answer3: '',
+    answer4: ''
+  };
+
+  public forms: FormGroup;
+
   constructor(
     private mainService: MainService,
     private dialogRef: MatDialogRef<ObjectivesComponent>,
@@ -24,6 +34,13 @@ export class ObjectivesComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.forms = new FormGroup({
+      answer1: new FormControl(this.results.answer1, [Validators.required]),
+      answer2: new FormControl(this.results.answer2, [Validators.required]),
+      answer3: new FormControl(this.results.answer3, [Validators.required]),
+      answer4: new FormControl(this.results.answer4, [Validators.required])
+    });
+
     this.listObjectives = this.mainService.getListObjectives();
     this.objective = this.listObjectives[0];
   }
