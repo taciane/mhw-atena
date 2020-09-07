@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { MainService } from '../main.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-my-profile',
@@ -15,11 +16,15 @@ export class MyProfileComponent implements OnInit {
   formacoes: any;
 
   constructor(
-    private mainService: MainService
+    private mainService: MainService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
     this.jobs = this.mainService.getTypeOfJob();
     this.jobsTest = this.mainService.getJobsTest();
+  }
+  redirectDash(){
+    this.router.navigate(['dashboard']);
   }
 }
