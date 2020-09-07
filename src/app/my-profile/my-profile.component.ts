@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { MainService } from '../services/main.service';
+import { SharedService } from '../services/shared.service';
 import { Router } from '@angular/router';
 
 import { OwlOptions } from 'ngx-owl-carousel-o';
@@ -44,6 +45,7 @@ export class MyProfileComponent implements OnInit {
   }
   constructor(
     private mainService: MainService,
+    private sharedService: SharedService,
     private router: Router
   ) { }
 
@@ -57,5 +59,6 @@ export class MyProfileComponent implements OnInit {
 
   selectImage(image: string){
     this.selectedImage = image;
+    this.sharedService.changeProfileImage(this.selectedImage);
   }
 }

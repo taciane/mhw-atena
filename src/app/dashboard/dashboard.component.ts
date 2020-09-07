@@ -67,7 +67,7 @@ export class DashboardComponent implements OnInit{
 
     this.subscription = this.sharedService.currentProfileImage.subscribe((img) => {
       this.profileImg = img;
-    })
+    });
   }
 
   click(){}
