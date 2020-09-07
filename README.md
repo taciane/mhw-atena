@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.5.
 
+## Instalação
+  1. Certifique-se de ter instalado o Node.js (>= 12.16.3)
+  2. Faça o clone deste repositório executando o comando do Git `git clone git@github.com:taciane/mhw-atena.git`
+  
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
