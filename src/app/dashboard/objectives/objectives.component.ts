@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject} from '@angular/core';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
-import { MainService } from '../../main.service';
+import { MainService } from '../../services/main.service';
 
 @Component({
   selector: 'app-objectives',

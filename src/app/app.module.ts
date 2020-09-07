@@ -22,6 +22,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatMenuModule} from '@angular/material/menu';
 
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
@@ -38,7 +39,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ObjectivesComponent } from './dashboard/objectives/objectives.component';
 import { RealityComponent } from './dashboard/reality/reality.component';
 import { OptionsComponent } from './dashboard/options/options.component';
-import { MainService } from './main.service';
+import { MainService } from './services/main.service';
 import { WhatNextComponent } from './dashboard/what-next/what-next.component';
 import { DialogStepCompleteComponent } from './dashboard/dialog-step-complete/dialog-step-complete.component';
 
@@ -83,6 +84,7 @@ import { MyProfileComponent } from './my-profile/my-profile.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatProgressBarModule,
+    MatMenuModule,
     ReactiveFormsModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),

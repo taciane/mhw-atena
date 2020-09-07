@@ -33,6 +33,14 @@ mat-dialog-container {
 .color-8{ color: #FF4571; }
 .color-9{ color: #EB7C44; }
 
+
+#mat-menu-panel-0{
+  border-bottom-right-radius: 25px !important;
+}
+#mat-menu-panel-1{
+  border-bottom-left-radius: 25px !important;
+}
+
 .owl-next, .owl-prev {
   position: absolute;
   bottom: 35px;

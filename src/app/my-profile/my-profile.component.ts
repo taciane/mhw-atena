@@ -1,5 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { MainService } from '../main.service';
+import { MainService } from '../services/main.service';
 import { Router } from '@angular/router';
 
 import { OwlOptions } from 'ngx-owl-carousel-o';
