@@ -2,6 +2,8 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import { MainService } from '../main.service';
 import { Router } from '@angular/router';
 
+import { OwlOptions } from 'ngx-owl-carousel-o';
+
 @Component({
   selector: 'app-my-profile',
   templateUrl: './my-profile.component.html',
@@ -15,6 +17,31 @@ export class MyProfileComponent implements OnInit {
   checked: boolean;
   formacoes: any;
 
+  public selectedImage: string;
+  public customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
+    dots: false,
+    navSpeed: 700,
+    navText: ['<', '>'],
+    responsive: {
+      0: {
+        items: 4
+      },
+      400: {
+        items: 2
+      },
+      740: {
+        items: 3
+      },
+      940: {
+        items: 6
+      }
+    },
+    nav: true
+  }
   constructor(
     private mainService: MainService,
     private router: Router
@@ -26,5 +53,9 @@ export class MyProfileComponent implements OnInit {
   }
   redirectDash(){
     this.router.navigate(['dashboard']);
+  }
+
+  selectImage(image: string){
+    this.selectedImage = image;
   }
 }

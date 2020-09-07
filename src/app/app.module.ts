@@ -23,6 +23,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 
+import { CarouselModule } from 'ngx-owl-carousel-o';
+
 // import { MatMomentDateModule } from '@angular/material-moment-adapter';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -88,7 +90,8 @@ import { MyProfileComponent } from './my-profile/my-profile.component';
     MatListModule,
     NgbModule,
     MatRadioModule,
-    MatExpansionModule
+    MatExpansionModule,
+    CarouselModule
   ],
   providers: [
     MainService,
