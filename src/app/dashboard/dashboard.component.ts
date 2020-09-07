@@ -6,6 +6,9 @@ import { OptionsComponent } from './options/options.component';
 import { WhatNextComponent } from './what-next/what-next.component';
 import { DialogStepCompleteComponent } from './dialog-step-complete/dialog-step-complete.component';
 
+import { SharedService } from 'src/app/services/shared.service'
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -22,29 +25,29 @@ export class DashboardComponent implements OnInit{
   {id: 4, name: 'next'}];
 
   public imgParts = [{
-    'shape': 'circle',
-    'type': 'objective',
-    'coords': '',
-    'fullCoords': '419,146,141',
-    'highlighted': true
+    shape: 'circle',
+    type: 'objective',
+    coords: '',
+    fullCoords: '419,146,141',
+    highlighted: true
   }, {
-    'shape': 'circle',
-    'type': 'options',
-    'coords': '',
-    'fullCoords': '977,920,140',
-    'highlighted': true
+    shape: 'circle',
+    type: 'options',
+    coords: '',
+    fullCoords: '977,920,140',
+    highlighted: true
   }, {
-    'shape': 'poly',
-    'type': 'reality',
-    'coords': '',
-    'fullCoords': '613,435,866,433,881,458,887,695,870,717,618,715,601,695,601,458',
-    'highlighted': true
+    shape: 'poly',
+    type: 'reality',
+    coords: '',
+    fullCoords: '613,435,866,433,881,458,887,695,870,717,618,715,601,695,601,458',
+    highlighted: true
   }, {
-    'shape': 'poly',
-    'type': 'next',
-    'coords': '',
-    'fullCoords': '598,1138,611,1121,875,1125,887,1137,883,1388,880,1410,609,1412,597,1395',
-    'highlighted': true
+    shape: 'poly',
+    type: 'next',
+    coords: '',
+    fullCoords: '598,1138,611,1121,875,1125,887,1137,883,1388,880,1410,609,1412,597,1395',
+    highlighted: true
   }];
 
   public isObjVisible = false;
@@ -52,14 +55,19 @@ export class DashboardComponent implements OnInit{
   public isRealVisible = false;
   public isNextVisible = false;
 
+  private subscription;
+  public profileImg = '';
+
   @ViewChild('mappedImg') private mappedImg;
-  constructor(
-    public dialog: MatDialog
-  ) { }
+  constructor( public dialog: MatDialog, private sharedService: SharedService, private router: Router ) { }
 
   ngOnInit(): void {
     this.step = this.steps[0];
     this.setImage(this.step.name);
+
+    this.subscription = this.sharedService.currentProfileImage.subscribe((img) => {
+      this.profileImg = img;
+    })
   }
 
   click(){}
@@ -71,7 +79,7 @@ export class DashboardComponent implements OnInit{
 
     dialogRef.afterClosed().subscribe(result => {
       if (result){
-        if(step['id'] > this.step.id){
+        if (step['id'] > this.step.id){
           this.step = step;
           this.setImage(this.step.name);
 
@@ -134,6 +142,10 @@ export class DashboardComponent implements OnInit{
  }
 
  onClick(){
+ }
+
+ redirectMyProfile(){
+   this.router.navigate(['my-profile']);
  }
 
 /*  mouseEnter(type){

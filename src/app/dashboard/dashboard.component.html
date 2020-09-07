@@ -13,17 +13,17 @@
         <button mat-menu-item><img src="assets/icons-profile/icone-simulador.svg" alt="" width="25px" height="25px"> Simulador de Entrevista</button>
       </mat-menu>
 
-      <div style="position: absolute;left:45%">
+      <div style="position: absolute;left:40%">
         <a href="/"><img src="assets/GrowGirl-logo-colorized-4.svg" style="height: 25px;"></a>
       </div>
 
-      <div style="position: absolute; right:35px;">
+      <div style="position: absolute; right:95px;">
         <img src="assets/icone-lupa-busca.svg" width="30px;">
         <button mat-button [matMenuTriggerFor]="menu">
-          <img src="assets/avatars-grow-girl/5.svg" alt="" width="32px" height="32px">
+          <img src="{{ profileImg }}" style="width:40px; border:solid 3px #d3d3d3; border-radius:75px;">
         </button>
         <mat-menu #menu="matMenu">
-          <button mat-menu-item>
+          <button mat-menu-item (click)="redirectMyProfile()">
             <img src="assets/icons-profile/icone-perfil.svg" alt="" width="25px" height="25px">Perfil</button>
           <button mat-menu-item><img src="assets/icons-profile/icone-pontuacao.svg" alt="" width="25px" height="25px">Pontuação</button>
           <button mat-menu-item><img src="assets/icons-profile/icone-dicas.svg" alt="" width="25px" height="25px">Dicas</button>

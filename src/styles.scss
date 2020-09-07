@@ -4,6 +4,8 @@
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 
 * {
     font-family: 'Roboto', sans-serif;
@@ -31,9 +33,21 @@ mat-dialog-container {
 .color-8{ color: #FF4571; }
 .color-9{ color: #EB7C44; }
 
+
 #mat-menu-panel-0{
   border-bottom-right-radius: 25px !important;
 }
 #mat-menu-panel-1{
   border-bottom-left-radius: 25px !important;
+}
+
+.owl-next, .owl-prev {
+  position: absolute;
+  bottom: 35px;
+}
+.owl-next{
+  right: 0;
+}
+.owl-prev{
+  left: 0;
 }
