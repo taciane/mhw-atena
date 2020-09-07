@@ -5,8 +5,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Instalação
   1. Certifique-se de ter instalado o Node.js (>= 12.16.3) `node -v`
   2. Certifique-se de ter o Git instalado, verifique a versão executando `git --v`
-     (outra opção: download em Code -> Download ZIP)
   3. Faça o clone deste repositório executando o comando do Git `git clone git@github.com:taciane/mhw-atena`
+     (outra opção: download em Code -> Download ZIP)
   4. Mover para o diretório criado `cd mhw-atena`
   5. Caso utilize o Visual Studio Code como editor de códigos, execute `code .`
      Obs: Em outros casos, abra o editor de códigos de sua preferência: Arquivo -> Abrir pasta, escolha o diretório mhw-atena
