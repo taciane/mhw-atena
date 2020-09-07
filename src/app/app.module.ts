@@ -21,6 +21,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+
 // import { MatMomentDateModule } from '@angular/material-moment-adapter';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -77,6 +79,7 @@ import { DialogStepCompleteComponent } from './dashboard/dialog-step-complete/di
     MatCheckboxModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatProgressBarModule,
     ReactiveFormsModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),

@@ -86,7 +86,7 @@
 
       </div>
       <div class="col-6">
-        <div *ngFor="let item of jobs2" ><br>
+        <div *ngFor="let item of jobsTest" ><br>
           <span><b>{{item.cargo}}</b></span><br>
           <span>{{item.dataInicio}} - {{item.dataTermino}}</span><br>
           <span>{{item.descricao}}</span>
@@ -104,12 +104,49 @@
         </mat-panel-description> -->
       </mat-expansion-panel-header>
 
-      <mat-form-field>
-        <mat-label>Country</mat-label>
-        <input matInput type="text" />
+      <div class="row">
+        <div class="col-6">
+          <mat-form-field>
+            <mat-label>Instituição de ensino </mat-label>
+            <input matInput type="text" />
+          </mat-form-field>
 
-      </mat-form-field>
+          <mat-form-field>
+            <mat-label>Formação</mat-label>
+            <input matInput type="text" />
+          </mat-form-field>
+          <br>
+
+          <mat-form-field>
+            <mat-label>Data de início</mat-label>
+            <input matInput [matDatepicker]="picker3" (focus)="picker3.open()" readonly>
+            <mat-datepicker #picker3></mat-datepicker>
+          </mat-form-field>
+
+          <mat-form-field class="ml-2" *ngIf="!checked" >
+            <mat-label>Data de término</mat-label>
+            <input matInput [matDatepicker]="picker4" (focus)="picker4.open()" readonly>
+            <mat-datepicker #picker4></mat-datepicker>
+          </mat-form-field>
+          <br>
+          <mat-form-field class="example-full-width">
+            <mat-label>Descrição</mat-label>
+            <textarea matInput placeholder=""></textarea>
+          </mat-form-field><br>
+          <button mat-button>Cancelar</button>
+          <button mat-button>Salvar</button>
+
+        </div>
+        <div class="col-6">
+          <h5 *ngIf="!(formacoes?.length > 0)">Você ainda não tem formação adicionada!</h5>
+        </div>
+       </div>
     </mat-expansion-panel>
-
   </mat-accordion>
+
+  <div class="col-md-6 offset-3 mt-3">
+    <span>40%</span> <span style="float: right">100%</span>
+    <mat-progress-bar class="mt-2 " mode="determinate" value="40"></mat-progress-bar>
+    <button mat-button class="style-button mt-2"><b>Comece a trilhar sua carreira</b></button>
+  </div>
 </div>

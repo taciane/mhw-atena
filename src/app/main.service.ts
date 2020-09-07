@@ -27,4 +27,10 @@ export class MainService {
       { id: 7, name: 'Freelance', },
     ];
   }
+  getJobsTest(){
+    return [
+    {id: 1, cargo: 'Estágio', dataInicio: '06/05/2019', dataTermino: '03/05/2020', descricao: 'Atuação no setor de Suporte/DevOps.'},
+    {id: 2, cargo: 'Menor Aprendiz', dataInicio: '03/02/2018', dataTermino: '03/02/2019', descricao: 'Atuação no setor de Suporte.'},
+    ];
+  }
 }
