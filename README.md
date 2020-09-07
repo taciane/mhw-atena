@@ -1,4 +1,6 @@
 # MhwAtena
+  Este projeto (Progressive Web App) foi desenvolvido para solução do desafio da empresa [Vtex](https://vtex.com/br-pt/) como incentivo para mulheres atuarem na área da tecnologia, em busca da redução da desigualdade de gêneros no mercado.
+  Este desafio faz parte do hackathon Mega Hack Women em realização da [Shawee](https://shawee.io/pt/).
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.5.
 
