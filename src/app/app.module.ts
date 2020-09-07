@@ -8,9 +8,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatDialogModule} from '@angular/material/dialog';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
-import { MatRadioModule } from '@angular/material/radio';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatRadioModule } from '@angular/material/radio';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,14 +27,14 @@ import { OptionsComponent } from './dashboard/options/options.component';
 import { MainService } from './main.service';
 import { WhatNextComponent } from './dashboard/what-next/what-next.component';
 import { DialogStepCompleteComponent } from './dashboard/dialog-step-complete/dialog-step-complete.component';
-import { MyProfileComponent } from './my-profile/my-profile.component';
+
 import { NavigationComponent } from './navigation/navigation.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatListModule } from '@angular/material/list';
-
 import { LoginComponent } from './login/login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselComponent } from './carousel/carousel.component';
+import { MyProfileComponent } from './my-profile/my-profile.component';
 
 @NgModule({
   declarations: [
