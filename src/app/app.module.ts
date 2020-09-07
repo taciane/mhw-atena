@@ -38,12 +38,12 @@ import { RealityComponent } from './dashboard/reality/reality.component';
 import { OptionsComponent } from './dashboard/options/options.component';
 import { MainService } from './main.service';
 import { WhatNextComponent } from './dashboard/what-next/what-next.component';
-import { MyProfileComponent } from './my-profile/my-profile.component';
-import { NavigationComponent } from './navigation/navigation.component';
+import { DialogStepCompleteComponent } from './dashboard/dialog-step-complete/dialog-step-complete.component';
 
+import { NavigationComponent } from './navigation/navigation.component';
 import { LoginComponent } from './login/login.component';
 import { CarouselComponent } from './carousel/carousel.component';
-import { DialogStepCompleteComponent } from './dashboard/dialog-step-complete/dialog-step-complete.component';
+import { MyProfileComponent } from './my-profile/my-profile.component';
 
 @NgModule({
   declarations: [
@@ -56,11 +56,12 @@ import { DialogStepCompleteComponent } from './dashboard/dialog-step-complete/di
     RealityComponent,
     OptionsComponent,
     WhatNextComponent,
+    DialogStepCompleteComponent,
     MyProfileComponent,
     NavigationComponent,
     LoginComponent,
-    CarouselComponent,
     DialogStepCompleteComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,

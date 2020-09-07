@@ -10,7 +10,7 @@ export class DialogStepCompleteComponent implements OnInit {
   public imgUrl: string;
 
   constructor(@Inject(MAT_DIALOG_DATA) public data) {
-    this.imgUrl = '../assets/completed-objective.png';
+    this.imgUrl = data;
   }
 
   ngOnInit(): void {

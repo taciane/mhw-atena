@@ -131,7 +131,6 @@ export class DashboardComponent implements OnInit{
 
     part.coords = result;
   });
-
  }
 
  onClick(){
@@ -182,7 +181,5 @@ export class DashboardComponent implements OnInit{
       default:
         break;
     }
-  }
-
   }*/
 }

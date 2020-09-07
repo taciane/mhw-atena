@@ -63,13 +63,19 @@
 }
 
 .save-button{
+  border-radius: 15px;
+  background-color: #FF4571;
+  color: white;
 }
 
 .back-button{
   margin-right: 25px;
+  border-radius: 15px;
+  border: solid 1px #d3d3d3;
 }
 
 .action-buttons{
   position: relative;
   left: 40%;
+  font-weight: bold;
 }

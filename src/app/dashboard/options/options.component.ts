@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-options',
@@ -12,6 +13,14 @@ export class OptionsComponent implements OnInit {
   public currentStep: {id: number, nome: string};
 
   public isAvailable: boolean;
+  
+  public results = {
+    answer1: '',
+    answer2: '',
+    answer3: ''
+  };
+  
+  public forms: FormGroup;
 
   constructor(@Inject(MAT_DIALOG_DATA) public data) {
     this.id = 3;
@@ -21,6 +30,11 @@ export class OptionsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.forms = new FormGroup({
+      answer1: new FormControl(this.results.answer1, [Validators.required]),
+      answer2: new FormControl(this.results.answer2, [Validators.required]),
+      answer3: new FormControl(this.results.answer3, [Validators.required])
+    });
   }
 
 }
