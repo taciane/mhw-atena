@@ -147,7 +147,9 @@ export class DashboardComponent implements OnInit{
  redirectMyProfile(){
    this.router.navigate(['my-profile']);
  }
-
+ redirectToHome(){
+  this.router.navigate(['/']);
+ }
 /*  mouseEnter(type){
   console.log('mouseover ' + type);
   switch(type){
