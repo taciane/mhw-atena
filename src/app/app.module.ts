@@ -11,10 +11,22 @@ import {MatCardModule} from '@angular/material/card';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatRadioModule } from '@angular/material/radio';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatListModule } from '@angular/material/list';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+
+// import { MatMomentDateModule } from '@angular/material-moment-adapter';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
@@ -29,10 +41,7 @@ import { WhatNextComponent } from './dashboard/what-next/what-next.component';
 import { DialogStepCompleteComponent } from './dashboard/dialog-step-complete/dialog-step-complete.component';
 
 import { NavigationComponent } from './navigation/navigation.component';
-import { LayoutModule } from '@angular/cdk/layout';
-import { MatListModule } from '@angular/material/list';
 import { LoginComponent } from './login/login.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselComponent } from './carousel/carousel.component';
 import { MyProfileComponent } from './my-profile/my-profile.component';
 
@@ -51,6 +60,7 @@ import { MyProfileComponent } from './my-profile/my-profile.component';
     MyProfileComponent,
     NavigationComponent,
     LoginComponent,
+    DialogStepCompleteComponent,
     CarouselComponent
   ],
   imports: [
@@ -65,13 +75,20 @@ import { MyProfileComponent } from './my-profile/my-profile.component';
     MatDialogModule,
     MatSidenavModule,
     MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatCheckboxModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatProgressBarModule,
     ReactiveFormsModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     LayoutModule,
     MatListModule,
     NgbModule,
-    MatRadioModule
+    MatRadioModule,
+    MatExpansionModule
   ],
   providers: [
     MainService,

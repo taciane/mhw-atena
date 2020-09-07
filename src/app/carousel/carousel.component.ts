@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./carousel.component.scss']
 })
 export class CarouselComponent implements OnInit {
-  images = [1, 2, 3].map((n) => `assets/imagens-banner/banner-${n}-pq.png`);
+  images = [1, 2, 3].map((n) => `assets/imagens-banner/${n}.png`);
 
   constructor(
     private router: Router

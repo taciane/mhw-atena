@@ -1,1 +1,154 @@
+<mat-toolbar>
+  <div class="container" >
+    <div class="row mb-4">
+      <button mat-button ><mat-icon style="color: #4252FF;">menu</mat-icon> <span style="color: #4252FF;">MENU</span></button>
+      <div class="align-self-center align-items-center offset-3">
+        <a href="/home">
+          <img src="assets/GrowGirl-logo-colorized-4.svg" width="200" style="margin-top: 30px;">
+        </a>
+      </div>
+      <div class="col-md-1 offset-3 align-items-center align-self-end justify-content-end">
+        <img src="assets/icone-lupa-busca.svg" width="30px;">
+      </div>
+    </div>
+  </div>
+</mat-toolbar>
 
+<div class="container">
+  <h4 class="color-8">CRIE SEU PERFIL</h4>
+  <div class="row" style="width: 200px; position: absolute;">
+    <!-- <div class="row" *ngFor="let image of images; index as i">
+      <img  [src]="image" alt="" width="200">
+    </div> -->
+  </div>
+  <h4 class="color-5">Conte um pouco mais sobre sua trajetória profissional</h4>
+  <span></span>
+
+  <!-- <h6 class="color-5">Sobre você</h6> -->
+  <!-- <span class="color-5">Conte-nos um pouco sobre você...</span> -->
+
+  <mat-accordion class="example-headers-align" multi>
+    <mat-expansion-panel >
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+         <h5 class="color-5">Experiências</h5>
+        </mat-panel-title>
+        <!-- <mat-panel-description>
+        </mat-panel-description> -->
+      </mat-expansion-panel-header>
+
+     <div class="row">
+      <div class="col-6">
+        <mat-form-field>
+          <mat-label>Cargo</mat-label>
+          <input matInput type="text" />
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Tipo de Emprego</mat-label>
+          <mat-select >
+            <mat-option *ngFor="let job of jobs"
+            value="job.id">{{job.name}}</mat-option>
+            <!-- <mat-option value="option3">Option 3</mat-option> -->
+          </mat-select>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <mat-label>Empresa</mat-label>
+          <input matInput type="text" />
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Localidade</mat-label>
+          <input matInput type="text" />
+        </mat-form-field>
+
+        <section class="example-section">
+          <mat-checkbox class="example-margin" [(ngModel)]="checked">Trabalho atualmente neste cargo</mat-checkbox>
+        </section>
+
+        <mat-form-field>
+          <mat-label>Data de início</mat-label>
+          <input matInput [matDatepicker]="picker1" (focus)="picker1.open()" readonly>
+          <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field class="ml-2" *ngIf="!checked" >
+          <mat-label>Data de término</mat-label>
+          <input matInput [matDatepicker]="picker2" (focus)="picker2.open()" readonly>
+          <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+          <mat-label>Descrição</mat-label>
+          <textarea matInput placeholder=""></textarea>
+        </mat-form-field><br>
+        <button mat-button>Cancelar</button>
+        <button mat-button>Salvar</button>
+
+      </div>
+      <div class="col-6">
+        <div *ngFor="let item of jobsTest" ><br>
+          <span><b>{{item.cargo}}</b></span><br>
+          <span>{{item.dataInicio}} - {{item.dataTermino}}</span><br>
+          <span>{{item.descricao}}</span>
+        </div>
+      </div>
+     </div>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel >
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h5 class="color-5">Formação</h5>
+        </mat-panel-title>
+      <!--   <mat-panel-description>
+        </mat-panel-description> -->
+      </mat-expansion-panel-header>
+
+      <div class="row">
+        <div class="col-6">
+          <mat-form-field>
+            <mat-label>Instituição de ensino </mat-label>
+            <input matInput type="text" />
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Formação</mat-label>
+            <input matInput type="text" />
+          </mat-form-field>
+          <br>
+
+          <mat-form-field>
+            <mat-label>Data de início</mat-label>
+            <input matInput [matDatepicker]="picker3" (focus)="picker3.open()" readonly>
+            <mat-datepicker #picker3></mat-datepicker>
+          </mat-form-field>
+
+          <mat-form-field class="ml-2" *ngIf="!checked" >
+            <mat-label>Data de término</mat-label>
+            <input matInput [matDatepicker]="picker4" (focus)="picker4.open()" readonly>
+            <mat-datepicker #picker4></mat-datepicker>
+          </mat-form-field>
+          <br>
+          <mat-form-field class="example-full-width">
+            <mat-label>Descrição</mat-label>
+            <textarea matInput placeholder=""></textarea>
+          </mat-form-field><br>
+          <button mat-button>Cancelar</button>
+          <button mat-button>Salvar</button>
+
+        </div>
+        <div class="col-6">
+          <h5 *ngIf="!(formacoes?.length > 0)">Você ainda não tem formação adicionada!</h5>
+        </div>
+       </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <div class="col-md-6 offset-3 mt-3">
+    <span>40%</span> <span style="float: right">100%</span>
+    <mat-progress-bar class="mt-2 " mode="determinate" value="40"></mat-progress-bar>
+    <button mat-button class="style-button mt-2" (click)="redirectDash()"><b>Comece a trilhar sua carreira</b></button>
+  </div>
+</div>
